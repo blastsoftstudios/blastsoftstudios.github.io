@@ -1,0 +1,44 @@
+---
+layout: default
+title: Downloads
+nav: downloads
+extra_css: [album]
+og_title: Blastsoft Studios - Downloads
+og_description: Blastsoft Studios. Games, software, and utilities. Home of Super Mario Sunshine Bin Editor, Discord Bot Avatar Changer and random things.
+permalink: /downloads/
+---
+    <div class="media-body">
+
+        <section class="jumbotron jumbotron-fluid p-5 mt-5">
+            <div class="container text-center p-0">
+                <h1 class="jumbotron-heading">Downloads</h1>
+            </div>
+        </section>
+
+            <div class="container mt-2">
+                <div class="row card-deck">
+                {%- assign downloads = site.downloads | sort: "order" %}
+                {%- for download in downloads %}
+                    <div class="card justify-content-sm-between col-md-12 col-lg-4 col-xl-4" style="width:400px">
+                        <h3 class="jumbotron-heading">{{ download.name | escape }}</h3>
+                        <a href="{{ download.url }}">
+                        <img class="card-img-top" data-src="{{ download.image_link | escape }}" style="height: 280px; width: 100%; display: block;" src="{{ download.image_link | escape }}" data-holder-rendered="true">
+                        </a>
+                        <p class="card-text">{{ download.short_description | escape }}</p>
+                        <a href="{{ download.url }}" class="btn btn-primary">Get {{ download.name | escape }}</a>
+                    </div>
+                    {%- assign mod = forloop.index | modulo: 3 %}
+                    {%- if mod == 0 %}
+                        </div>
+                        <hr class="featurette-divider">
+                        <label for="ad" class="jumbotron-heading text-sm-center text-muted container">Advertisement</label>
+                        <div class="row justify-content-center col-md-12 container-fluid m-2" id="ad">
+                            {% include ad.html %}
+                        </div>
+                        <hr class="featurette-divider">
+                        <div class="row card-deck">
+                    {%- endif %}
+                {%- endfor %}
+                    </div>
+            </div>
+    </div>

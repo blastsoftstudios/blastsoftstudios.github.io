@@ -1,0 +1,24 @@
+title: Blastsoft Studios
+url: https://blastsoftstudios.com
+
+plugins:
+  - jekyll-redirect-from
+
+collections:
+  downloads:
+    output: true
+    permalink: /downloads/:name
+  webapps:
+    output: true
+    permalink: /app/:name
+
+# Top level pages listed in sitemap.xml; collections are added automatically
+sitemap_pages: [/, /about/, /downloads/]
+
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]
+
+defaults:
+  - scope: {type: downloads}
+    values: {nav: downloads}
+  - scope: {type: webapps}
+    values: {nav: webapps, extra_css: [carousel, album]}

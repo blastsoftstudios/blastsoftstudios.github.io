@@ -1,0 +1,59 @@
+---
+layout: default
+name: ASCII Emoji Art Generator
+order: 1
+title: ASCII Emoji Art Generator
+og_title: ASCII Emoji Art Generator - Blastsoft Studios
+og_description: Generate large text made out of emoji or ASCII characters for any chat platform. Compatible with Steam, iMessage, Slack, and Discord emoticons. - Blastsoft Studios - Games, software, and utilities.
+redirect_from: /apps/bmesgen
+updated: 2018-05-26
+---
+    <!-- Place page specific body code here -->
+    <main role="main" class="container">
+    <section class="jumbotron">
+        <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+        <div class="row featurette justify-content-center hidden-xs" id="ad">
+                        {% include ad.html %}
+        </div>
+        <hr class="featurette-divider">
+        <div class="col-md-12">
+            <img id="font" src="/static/apps/bmesgen_font.png" width="128" height="24" hidden="yes" />
+            <canvas class="hide" hidden="yes" id="mycanvas" width="128" height="24"></canvas>
+            <h1 class="jumbotron-heading">Text to ASCII/Emoticon Art Generator</h1>
+            <p> Generate large text made out of emoji or ASCII characters for any chat platform. Compatible with Steam, iMessage, Slack, and Discord emoticons.</p><br />
+            <div class="form-group">
+                <label for="message_id">Message:</label>
+                <input class="input-xlarge focused form-control" name="message" placeholder="Your ASCII Message Goes Here" id="message_id" type="text" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="emote_id">Emote Code:</label>
+                <input class="input-xlarge form-control" name="emote" id="emote_id" value=":slight_smile:" required>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="spacing_id">Message Width:</label>
+                <input class="input-xlarge form-control" type="number" name="spacing" id="spacing_id" value="7" required>
+                <p>9 is ideal for Discord, 7 is ideal for Slack, 6 for iMessage. All clients may vary. Try different spacing to fix ugliness.</p>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="im_id" name="im" checked="true" />
+                <label class="form-check-label" for="im_id">Add line break for instant messengers</label>
+            </div>
+            <div class="form-group">
+                <button type="button" id="OKButton" class="btn btn-primary btn-large" onclick="onButtonClick();">Generate ASCII Message</button>
+            </div>
+            <hr class="featurette-divider">
+            <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+            <div class="row featurette justify-content-center hidden-xs" id="ad">
+                                {% include ad.html %}
+            </div>
+            <hr class="featurette-divider">
+            <div class="form-group">
+                <label for="output_id">Output(click to select all):</label>
+                <textarea class="input-xlarge form-control" id="output_id" rows="8" wrap="off" onclick="this.select();"></textarea>
+                <p>If there are generation issues try clearing your browsers cache. Sometimes chrome will be stubborn and cache an improperly loaded legend image.</p>
+            </div>
+            <script src="/static/apps/bmesgen.js"></script>
+        </div>
+
+    </section>
+    </main>

@@ -1,0 +1,66 @@
+---
+layout: default
+title: Home
+nav: home
+extra_css: [carousel]
+permalink: /
+---
+	<!-- Place page specific body code here -->
+    <main role="main">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide" style="position: absolute; height: auto;max-width: none;" src="https://cdn.blastsoftstudios.com/images/swoop_front_simple.png" alt="Third slide">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 style="text-shadow: 0 0 30px black, 0 0 30px black, 0px 0px 10px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1); "></h1>
+                            <p style="text-shadow: 0 0 30px black, 0px 0px 10px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1), 0 0 30px black;"></p>
+                            <p><a class="btn btn-lg btn-primary" href="/downloads/the-swoop" role="button">Download Swoop 64</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container align-items-md-center text-center" style="z-index:300000; position:absolute;">
+                        <br><br><br><br><br><br><br><br><br><br>
+                        <h1 style="text-shadow: 0 0 15px white, 0 0 10px black; padding-left: 700px;">Super Mario Sunshine Multiplayer Mod</h1>
+                        <p style="text-shadow: 0 0 20px white, 0 0 10px black; padding-left: 700px;">Make super mario sunshine support local multiplayer.</p>
+                        <p style="padding-left: 700px"><a class="btn btn-lg btn-primary" href="/downloads/smsmulti" role="button">Get the Game Patch</a></p>
+                    </div>
+                    <video class="second-slide carousel-inner" style="z-index: -100; min-height: 500px; min-width: 1000px;" src="https://cdn.blastsoftstudios.com/images/smsmulti_front.webm" alt="First slide" type="video/webm" playsinline muted loop autoplay>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide" style="position: absolute; height: auto;max-width: none;" src="https://cdn.blastsoftstudios.com/images/smsbinfrontpage.png" alt="Third slide">
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <p class="jumbotron-heading" style="text-shadow: 0px 0px 10px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1), 0px 0px 10px rgba(0,0,0,1);">Modding Super Mario Sunshine has never been easier.</p>
+                            <p><a class="btn btn-lg btn-primary" href="/downloads/smsedit" role="button">Get SMS Bin Editor</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+            <!-- START THE FEATURETTES -->
+        <div class="container">
+            <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+            <div class="row featurette justify-content-center hidden-xs" id="ad">
+                                {% include ad.html %}
+            </div>
+            <hr class="featurette-divider">
+            <!-- /END THE FEATURETTES -->
+        </div><!-- /.container -->
+    </main>

@@ -1,0 +1,48 @@
+---
+layout: default
+---
+{%- comment %} Converted from app/templates/get.html {% endcomment %}
+    <main role="main">
+        <section class="jumbotron container">
+            <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+            <div class="row featurette justify-content-center hidden-xs" id="ad">
+                {% include ad.html %}
+            </div>
+
+            <hr class="featurette-divider">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-info text-secondary jumbotron-heading" href="/downloads/"><i class="fas fa-arrow-alt-circle-left"></i>  back to downloads</a>
+                </li>
+            </ul>
+        <br>
+                <div class="row">
+                    <h1 class="jumbotron-heading">{{ page.name | escape }}</h1>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-sm-6">
+                        <p>{{ content }}</p>
+                        {%- if page.downloadable %}
+                            <p class="text-secondary small">Pressing download below affirms you agree and will abide by the Blastsoft Studios terms of service and software for our site, which is on our <a href="/legal/">Legal</a> page.</BR></p>
+                            <div class="form-row text-center d-block mx-auto">
+                                <a href="{{ page.link | escape }}" class="btn btn-primary">Get {{ page.name | escape }}</a>
+                            </div>
+                        {%- endif %}
+                    </div>
+                    <div class="col-md-5">
+                        {%- if page.alternate_side %}
+                        {{ page.alternate_side }}
+                        {%- else %}
+                        <img class="featurette-image img-fluid mx-auto" data-src="{{ page.image_link | escape }}" src="{{ page.image_link | escape }}" data-holder-rendered="true">
+                        {%- endif %}
+                    </div>
+                </div>
+
+            <hr class="featurette-divider">
+            <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+            <div class="row featurette justify-content-center hidden-xs" id="ad">
+                {% include ad.html %}
+            </div>
+
+        </section>
+    </main>

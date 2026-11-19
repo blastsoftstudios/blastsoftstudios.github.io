@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{%- comment %} Converted from app/templates/app.html. Web apps with their own page body (e.g. bmesgen) use layout: default instead. {% endcomment %}
+    <main role="main">
+    <section class="jumbotron">
+        {%- if page.advertisements %}
+            <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+            <div class="row featurette justify-content-center hidden-xs" id="ad">
+                {% include ad.html %}
+            </div>
+        {%- endif %}
+    <div class="embed-responsive z-depth-1-half" style="height: 750px">
+        <iframe class="embed-responsive-item" src="{{ page.link | escape }}" allowfullscreen></iframe>
+    </div>
+        {%- if page.advertisements %}
+            <label for="ad" class="jumbotron-heading text-sm-center container">Advertisement</label>
+            <div class="row featurette justify-content-center hidden-xs" id="ad">
+                {% include ad.html %}
+            </div>
+        {%- endif %}
+    </section>
+    </main>
